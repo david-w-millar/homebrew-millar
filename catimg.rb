@@ -21,3 +21,4 @@ class Catimg < Formula
     system "true"
   end
 end
+

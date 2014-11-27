@@ -2,3 +2,6 @@ homebrew-millar
 ===============
 
 my homebrew formulae
+
+// vim: set syntax=asciidoc:
+
