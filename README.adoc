@@ -1,7 +1,9 @@
 homebrew-millar
 ===============
 
-my homebrew formulae
+my homebrew formulae.
+
+If anyone is interested, I'll circle back, polish these up, and get them in homebrew-core if possible. Just drop me a line or open an issue.
 
 // vim: set syntax=asciidoc:
 
