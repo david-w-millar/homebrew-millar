@@ -1,5 +1,5 @@
 class Jolt < Formula
-  desc "JSON to JSON transformation library written in Java where the 'specification' for the transform is itself a JSON document"
+  desc "JSON to JSON transformation library and cli written in java"
   homepage "https://bazaarvoice.github.io/jolt/"
   url "http://search.maven.org/remotecontent?filepath=com/bazaarvoice/jolt/jolt-cli/0.0.24/jolt-cli-0.0.24.jar"
   sha256 "5a4bf4afb8bd01154aa2bcf89bde87a1b2623ae8b6901893a4d9f1a291689bbf"
@@ -24,7 +24,6 @@ class Jolt < Formula
         }
       }
     EOS
-
 
     (testpath/"jolt_spec.json").write <<-EOS.undent
       [
@@ -73,6 +72,6 @@ class Jolt < Formula
     EOS
 
     system "#{bin}/jolt transform spec.json input.json > expected_output.json"
-    system "#{bin}/jolt diffy output.json expected_output.json"
+    system "#{bin}/jolt", "diffy", "output.json", "expected_output.json"
   end
 end
